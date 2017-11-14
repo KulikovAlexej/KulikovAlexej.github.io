@@ -214,28 +214,46 @@ input[type='number'] {
           .wrapper .content_part section .cards .back p {
             text-align: right;
             margin-right: 30px; }
-          .wrapper .content_part section .cards .back input {
-            float: right;
-            margin-right: 15px;
-            width: 115px;
-            -moz-appearance: textfield; }
-          .wrapper .content_part section .cards .back .valid {
-            border: 1px solid green; }
-          .wrapper .content_part section .cards .back .invalid {
-            border: 1px solid red; }
+          .wrapper .content_part section .cards .back .cvv_block {
+            position: relative; }
+            .wrapper .content_part section .cards .back .cvv_block input {
+              float: right;
+              margin-right: 15px;
+              width: 115px;
+              -moz-appearance: textfield; }
+            .wrapper .content_part section .cards .back .cvv_block .valid {
+              border: 1px solid green; }
+            .wrapper .content_part section .cards .back .cvv_block .invalid {
+              border: 1px solid red; }
+            .wrapper .content_part section .cards .back .cvv_block .tip_btn {
+              position: absolute;
+              top: 5px;
+              right: 20px; }
+            .wrapper .content_part section .cards .back .cvv_block .tip_msg {
+              position: absolute;
+              width: 180px;
+              border: solid grey 1px;
+              background-color: #f7f8f8;
+              -webkit-border-radius: 4px;
+                      border-radius: 4px;
+              padding: 4px;
+              top: -75px;
+              right: 10px;
+              z-index: 99; }
       .wrapper .content_part section #send_data {
         padding: 9px 49px;
         margin-top: 34px;
         color: white;
         font-size: 17px;
-        background-image: -webkit-gradient(linear, left bottom, left top, from(#87b700), to(#a3c700));
-        background-image: -webkit-linear-gradient(bottom, #87b700 0%, #a3c700 100%);
-        background-image: linear-gradient(0deg, #87b700 0%, #a3c700 100%);
         -webkit-border-radius: 4px;
                 border-radius: 4px;
         border: none; }
+      .wrapper .content_part section .valid {
+        background: -webkit-gradient(linear, left bottom, left top, from(#87b700), to(#a3c700));
+        background: -webkit-linear-gradient(bottom, #87b700 0%, #a3c700 100%);
+        background: linear-gradient(0deg, #87b700 0%, #a3c700 100%); }
       .wrapper .content_part section .disabled {
-        background-color: grey; }
+        background: grey; }
       .wrapper .content_part section input {
         padding: 10px;
         border: 2px solid #e4e9ee; }
@@ -267,9 +285,9 @@ input[type='number'] {
         display: none; }
         .wrapper aside nav ul li {
           text-align: left;
-          font-size: 3.5rem;
-          padding-top: 35px;
-          padding-bottom: 35px; }
+          font-size: 2rem;
+          padding-top: 15px;
+          padding-bottom: 15px; }
       .wrapper aside .logo_contain {
         display: -webkit-box;
         display: -webkit-flex;
@@ -281,7 +299,8 @@ input[type='number'] {
                 justify-content: space-between; }
         .wrapper aside .logo_contain .logo {
           float: left;
-          width: 350px; }
+          width: 350px;
+          margin-bottom: 10px; }
           .wrapper aside .logo_contain .logo img {
             width: 100%; }
         .wrapper aside .logo_contain .contain_hamburger {
@@ -354,23 +373,31 @@ input[type='number'] {
           font-size: 1.5rem;
           line-height: 27px; }
       .wrapper .content_part section {
-        padding-top: 60px; }
-        .wrapper .content_part section .about_payment p {
-          font-size: 3rem; }
-        .wrapper .content_part section .about_payment table tbody tr td {
-          font-size: 2.5rem;
-          width: 400px;
-          padding-top: 10px;
-          padding-bottom: 10px; }
+        padding-top: 60px;
+        padding-left: 0px; }
+        .wrapper .content_part section .about_payment {
+          margin-left: 30px; }
+          .wrapper .content_part section .about_payment p {
+            font-size: 3rem; }
+          .wrapper .content_part section .about_payment table tbody tr td {
+            font-size: 2.5rem;
+            width: 400px;
+            padding-top: 10px;
+            padding-bottom: 10px; }
         .wrapper .content_part section h3 {
           margin-top: 60px;
+          margin-left: 30px;
           font-size: 3rem; }
         .wrapper .content_part section .cards {
           -webkit-box-orient: vertical;
           -webkit-box-direction: normal;
           -webkit-flex-direction: column;
               -ms-flex-direction: column;
-                  flex-direction: column; }
+                  flex-direction: column;
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+              -ms-flex-pack: center;
+                  justify-content: center; }
           .wrapper .content_part section .cards .card {
             width: 90%;
             height: auto;
@@ -380,7 +407,9 @@ input[type='number'] {
             top: 0; }
           .wrapper .content_part section .cards .front {
             padding: 30px;
-            padding-right: 0; }
+            padding-right: 0;
+            position: relative;
+            margin: 0 auto; }
             .wrapper .content_part section .cards .front .input_wrap .card_number p {
               font-size: 3rem; }
             .wrapper .content_part section .cards .front .input_wrap .card_number input {
@@ -416,17 +445,25 @@ input[type='number'] {
               height: 5rem; }
             .wrapper .content_part section .cards .back p {
               font-size: 2rem; }
-            .wrapper .content_part section .cards .back input {
+            .wrapper .content_part section .cards .back .cvv_block input {
               margin-top: 20px;
               height: 7rem;
               width: 15rem;
-              font-size: 4rem;
-                font-size-text-align: center; }
+              font-size: 4rem; }
+            .wrapper .content_part section .cards .back .cvv_block .tip_btn {
+              width: 50px;
+              top: 62px;
+              right: 25px; }
+              .wrapper .content_part section .cards .back .cvv_block .tip_btn img {
+                width: 100%; }
+            .wrapper .content_part section .cards .back .cvv_block .tip_msg {
+              padding: 8px; }
         .wrapper .content_part section #send_data {
           font-size: 4rem;
           padding: 20px 60px;
           -webkit-border-radius: 13px;
-                  border-radius: 13px; } }
+                  border-radius: 13px;
+          margin-left: 30px; } }
 
 @media only screen and (max-width: 768px) {
   .wrapper aside nav ul li {
@@ -467,10 +504,14 @@ input[type='number'] {
       font-size: 1.5rem; }
   .wrapper .content_part section .cards .back p {
     font-size: 1.5rem; }
-  .wrapper .content_part section .cards .back input {
+  .wrapper .content_part section .cards .back .cvv_block input {
     height: 3rem;
     width: 4rem;
-    font-size: 1.5rem; } }
+    font-size: 1.5rem; }
+  .wrapper .content_part section .cards .back .cvv_block .tip_btn {
+    top: 40px;
+    right: 20px;
+    width: 30px; } }
 
 @media only screen and (max-width: 480px) {
   .wrapper aside .logo_contain .contain_hamburger {
@@ -516,11 +557,16 @@ input[type='number'] {
     padding-left: 5px; }
   .wrapper .content_part section .cards .back p {
     font-size: 1.2rem; }
-  .wrapper .content_part section .cards .back input {
+  .wrapper .content_part section .cards .back .cvv_block input {
     height: 1rem;
     width: 3rem;
     font-size: 1.2rem;
     margin-top: 10px; }
+  .wrapper .content_part section .cards .back .cvv_block .tip_btn {
+    width: 22px;
+    top: 18px; }
+  .wrapper .content_part section .cards .back .cvv_block .tip_msg {
+    top: -65px; }
   .wrapper .content_part section #send_data {
     font-size: 2rem;
     padding: 20px 50px;

@@ -51,7 +51,7 @@
 					</table>
 				</div>
 				<h3>Данные банковской карты:</h3>
-				<form action="">
+				<form id='bank_details' action="">
 					<div class="cards">
 						<div class="card front">
 							<div class="input_wrap">
@@ -68,7 +68,7 @@
 								<div class="card_date">
 									<p>Срок действия</p>
 									<div class="wrap_card_months">
-										<select name="" id="card_months">
+										<select name="" id="card_months" class='valid'>
 											<option value="">01</option>
 											<option value="">02</option>
 											<option value="">03</option>
@@ -76,7 +76,7 @@
 										</select>
 									</div>
 									<div class="wrap_card_years">
-										<select name="" id="card_years">
+										<select name="" id="card_years" class='valid'>
 											<option value="">2018</option>
 											<option value="">2019</option>
 											<option value="">2020</option>
@@ -93,10 +93,16 @@
 						<div class="card back">
 							<div class="stripe"></div>
 							<p>Код CVV2/CVC2</p>
-							<input type="tel" maxlength="3" >
+							<div class="cvv_block">
+								<input type="tel" maxlength="3" >
+								<div class="tip_btn">
+									<img src="img/подсказка.png" alt="">
+								</div>
+								<div class="tip_msg">Трехзначное число на оборотной стороне</div>
+							</div>
 						</div>
 					</div>
-					<input id='send_data' class='disabled' type="submit" value="Оплатить">
+					<button id='send_data' class='valid' type="submit">Оплатить</button>
 				</form>
 
 			</section>
