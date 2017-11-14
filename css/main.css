@@ -239,7 +239,8 @@ input[type='number'] {
               padding: 4px;
               top: -75px;
               right: 10px;
-              z-index: 99; }
+              z-index: 99;
+              display: none; }
       .wrapper .content_part section #send_data {
         padding: 9px 49px;
         margin-top: 34px;
